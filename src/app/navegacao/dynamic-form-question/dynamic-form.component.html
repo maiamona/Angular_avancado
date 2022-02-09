@@ -1,0 +1,20 @@
+<br><br><br><br>
+<!-- #docregion -->
+<div>
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+<div class="form-group">
+    <div *ngFor="let question of questions">
+      <app-question [question]="question" [form]="form"></app-question>
+    </div>
+<br>
+    <div>
+      <button type="submit" [disabled]="!form.valid">Save</button>
+    </div>
+
+
+  <div *ngIf="payLoad">
+    <strong>Saved the following values</strong><br>{{payLoad}}
+  </div>
+</div>
+</form>
+</div>

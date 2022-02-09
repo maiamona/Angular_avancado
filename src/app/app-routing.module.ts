@@ -3,6 +3,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CadastroComponent } from './navegacao/cadastro/cadastro.component';
+import { FormularioComponent } from './navegacao/formulario/formulario.component';
 import { HomeComponent } from './navegacao/home/home.component';
 import { NotFoundComponent } from './navegacao/not-found/not-found.component';
 import { PrincipalComponent } from './navegacao/principal/principal.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
 {path: 'home', component: HomeComponent},
 {path: 'principal', component: PrincipalComponent},
 {path: 'cadastro', component: CadastroComponent},
+{path: 'formulario', component: FormularioComponent},
 {
   path: 'conta',
 loadChildren: () => import('./conta/conta.module')

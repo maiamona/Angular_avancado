@@ -9,6 +9,9 @@ import { NotFoundComponent } from "./not-found/not-found.component";
 import { PrincipalComponent } from './principal/principal.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { TextMaskModule } from "angular2-text-mask";
+import { FormularioComponent } from './formulario/formulario.component';
+import { DynamicFormQuestionComponent } from './dynamic-form-question/dynamic-form-question.component';
+import { DynamicFormComponent } from './dynamic-form-question/dynamic-form.component';
 
 
 @NgModule({
@@ -18,7 +21,10 @@ import { TextMaskModule } from "angular2-text-mask";
     FooterComponent,
     NotFoundComponent,
     PrincipalComponent,
-    CadastroComponent
+    CadastroComponent,
+    FormularioComponent,
+    DynamicFormQuestionComponent,
+    DynamicFormComponent
   ],
   imports: [
     CommonModule,
