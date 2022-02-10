@@ -23,6 +23,7 @@ import { ProdutoResolve } from '../conta/services/produto.resolve';
 import { FilmesComponent } from './filmes/filmes.component';
 import { FileSizePipe } from './filmes/file-size.pipe';
 import { BarComponent } from './bar/bar.component';
+import { ContadorComponent } from './contador/contador.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { BarComponent } from './bar/bar.component';
     FormularioComponent,
     DynamicFormQuestionComponent,
     DynamicFormComponent,
+    ContadorComponent,
 
 
   ],

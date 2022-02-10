@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { Cadastro2Guard } from './conta/services/cadastro2.guard';
 import { BarComponent } from './navegacao/bar/bar.component';
 import { CadastroComponent } from './navegacao/cadastro/cadastro.component';
+import { ContadorComponent } from './navegacao/contador/contador.component';
 import { FilmesComponent } from './navegacao/filmes/filmes.component';
 import { FormularioComponent } from './navegacao/formulario/formulario.component';
 import { HomeComponent } from './navegacao/home/home.component';
@@ -32,6 +33,7 @@ loadChildren: () => import('./navegacao/produto-dashboard/produto.module')
 },
 {path: 'filmes', component: FilmesComponent},
 { path: 'bar', component: BarComponent },
+{ path: 'contador', component: ContadorComponent },
 // {path: 'nao-encontrado', component: NotFoundComponent},
 {path: '**', component: NotFoundComponent}
 ];

@@ -1,0 +1,20 @@
+<br><br>
+<div class="container main-container">
+  <h1>Contador</h1>
+  <div class="contador">
+    <div>
+      <div (keydown)="onkeyUp($event)" (blur)="onBlur($event)" (focus)="onFocus($event)" tabindex="0">
+        <p>{{valor}}</p>
+        <div tabindex="-1">
+          <button type="button" tabindex="-1" (click)="incrementar()" [disabled]="valor === max">
+            +
+          </button>
+          <button type="button" tabindex="-1" (click)="decrementar()" [disabled]="valor === min">
+            -
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
