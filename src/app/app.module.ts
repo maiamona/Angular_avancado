@@ -13,6 +13,7 @@ import { NavegacaoModule } from './navegacao/navegacao.module';
 import { Cadastro2Guard } from './conta/services/cadastro2.guard';
 import { FilmesComponent } from './navegacao/filmes/filmes.component';
 import { FileSizePipe } from './navegacao/filmes/file-size.pipe';
+import { BarModule } from './navegacao/bar/bar.module';
 registerLocaleData(localePt);
 
 @NgModule({
@@ -30,7 +31,10 @@ registerLocaleData(localePt);
     FormsModule,
      ReactiveFormsModule,
      TextMaskModule,
-
+     BarModule.forRoot({
+      unidadeId: 1000,
+      unidadeToken: 'ecaa938c99a0e9ff910229dc',
+    }),
   ],
   providers: [
     Cadastro2Guard

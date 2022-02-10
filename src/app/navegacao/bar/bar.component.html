@@ -1,0 +1,28 @@
+<br><br>
+<div class="container main-container mb-5">
+  <h2>Bar</h2>
+  <div>
+    Unidade Maual: {{ConfigManual.unidadeId}} - Tokem Manual: {{ConfigManual.unidadeToken}}
+  </div>
+  <div>
+    Unidade: {{Config.unidadeId}} - Tokem: {{Config.unidadeToken}}
+  </div>
+  <div>
+    Bebidas1: {{barBebida1}}
+  </div>
+  <div>
+    Bebidas2: {{barBebida2}}
+  </div>
+  <div>
+    Dados Unidade (service): {{dadosUnidade}}
+  </div>
+  <br><br><br><br>
+<h2>Progress: {{progress}}%</h2>
+<p *ngIf="progress >= 100">Done processing {{label}} of Angular zone</p>
+<a href="javascript:void(0)" class="btn btn-success" (click)="processWithinAngularZone()">Processar dentro da Zona do Angular</a> &nbsp;
+<a href="javascript:void(0)" class="btn btn-danger" (click)="processOutsideOfAngularZone()">Processar fora da Zona do Angular</a> &nbsp;
+<a href="javascript:void(0)" class="btn btn-primary" (click)="zerar()">Zerar</a>
+<br><br>
+</div>
+
+

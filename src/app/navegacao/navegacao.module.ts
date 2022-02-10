@@ -22,6 +22,7 @@ import { ProdutoService } from '../conta/services/produto.service';
 import { ProdutoResolve } from '../conta/services/produto.resolve';
 import { FilmesComponent } from './filmes/filmes.component';
 import { FileSizePipe } from './filmes/file-size.pipe';
+import { BarComponent } from './bar/bar.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { FileSizePipe } from './filmes/file-size.pipe';
     FormularioComponent,
     DynamicFormQuestionComponent,
     DynamicFormComponent,
+
 
   ],
   imports: [
