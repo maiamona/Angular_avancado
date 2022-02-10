@@ -14,6 +14,7 @@ import { Cadastro2Guard } from './conta/services/cadastro2.guard';
 import { FilmesComponent } from './navegacao/filmes/filmes.component';
 import { FileSizePipe } from './navegacao/filmes/file-size.pipe';
 import { BarModule } from './navegacao/bar/bar.module';
+import { AuthGuard } from './conta/services/app.guard';
 registerLocaleData(localePt);
 
 @NgModule({
@@ -37,7 +38,8 @@ registerLocaleData(localePt);
     }),
   ],
   providers: [
-    Cadastro2Guard
+    Cadastro2Guard,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

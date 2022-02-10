@@ -12,18 +12,14 @@ import { TextMaskModule } from "angular2-text-mask";
 import { FormularioComponent } from './formulario/formulario.component';
 import { DynamicFormQuestionComponent } from './dynamic-form-question/dynamic-form-question.component';
 import { DynamicFormComponent } from './dynamic-form-question/dynamic-form.component';
-import { ProdutoDashboardComponent } from './produto-dashboard/produto-dashboard.component';
-import { ProdutoCardDetalheComponent } from './produto-count/produto-card-detalhe.component';
-import { ProdutoCountComponent } from './produto-count/produto-count.component';
-import { AppProdutoComponent } from './produto-dashboard/app-produto.component';
-import { EditarProdutosComponent } from './editar-produtos/editar-produtos.component';
+
 import { ProdutoRoutingModule } from './produto-dashboard/produto-routing.module';
 import { ProdutoService } from '../conta/services/produto.service';
 import { ProdutoResolve } from '../conta/services/produto.resolve';
-import { FilmesComponent } from './filmes/filmes.component';
-import { FileSizePipe } from './filmes/file-size.pipe';
-import { BarComponent } from './bar/bar.component';
+
+
 import { ContadorComponent } from './contador/contador.component';
+
 
 
 @NgModule({
@@ -38,6 +34,7 @@ import { ContadorComponent } from './contador/contador.component';
     DynamicFormQuestionComponent,
     DynamicFormComponent,
     ContadorComponent,
+
 
 
   ],

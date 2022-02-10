@@ -2,6 +2,7 @@
 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from './conta/services/app.guard';
 import { Cadastro2Guard } from './conta/services/cadastro2.guard';
 import { BarComponent } from './navegacao/bar/bar.component';
 import { CadastroComponent } from './navegacao/cadastro/cadastro.component';
@@ -34,6 +35,10 @@ loadChildren: () => import('./navegacao/produto-dashboard/produto.module')
 {path: 'filmes', component: FilmesComponent},
 { path: 'bar', component: BarComponent },
 { path: 'contador', component: ContadorComponent },
+{ path: 'admin',
+loadChildren: () => import('./navegacao/admin-dashboard/admin-route.module')
+.then(m => m.AdminRoutingModule),
+canLoad: [ AuthGuard], canActivate: [AuthGuard]},
 // {path: 'nao-encontrado', component: NotFoundComponent},
 {path: '**', component: NotFoundComponent}
 ];
