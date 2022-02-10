@@ -1,8 +1,8 @@
 
-import { TestBed } from "@angular/core/testing";
-import { Produto } from "../model/produtos";
+import { TestBed } from '@angular/core/testing';
+import { Produto } from '../model/produtos';
 
-import { ProdutoService } from "./produto.service";
+import { ProdutoService } from './produto.service';
 
 const produtosFake: Produto[] = [{
   id: 1,
@@ -107,7 +107,7 @@ describe('ProdutoService', () => {
   it('Deve retornar uma lista de produtos', () => {
     spyOn(service, 'obterTodos').and.returnValue(produtosFake);
 
-    let result = service.obterTodos('ativos')
+    const result = service.obterTodos('ativos')
 
     expect(result.length).toBe(11);
 
@@ -117,7 +117,7 @@ describe('ProdutoService', () => {
   it('Deve retornar um produto', () => {
     spyOn(service, 'obterPorId').and.returnValue(produtoFake);
 
-    let result = service.obterPorId(12)
+    const result = service.obterPorId(12)
 
     expect(result).toEqual(produtoFake);
     expect(result.id).toEqual(12);

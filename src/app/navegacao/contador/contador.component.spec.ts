@@ -1,5 +1,5 @@
-import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { ContadorComponent } from "./contador.component";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ContadorComponent } from './contador.component';
 
 describe('ContadorComponent', () => {
   let component: ContadorComponent;

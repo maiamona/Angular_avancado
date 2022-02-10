@@ -46,12 +46,12 @@
       "id": 8,
       "nome": "estudar porm.xml no visual code",
       "finalizado": false,
-      "iniciado": false
+      "iniciado": true
     },
     {
       "id": 9,
       "nome": "Fazer formação CSS",
-      "finalizado": false,
+      "finalizado": true,
       "iniciado": false
     },
     {

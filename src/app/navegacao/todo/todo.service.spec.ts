@@ -1,11 +1,11 @@
 import { Task } from './task';
 import { Store } from './todo.store';
-import { HttpClient } from "@angular/common/http";
-import { TestBed } from "@angular/core/testing";
-import { Observable, Observer } from "rxjs";
-import { TasksService } from "./todo.service";
+import { HttpClient } from '@angular/common/http';
+import { TestBed } from '@angular/core/testing';
+import { Observable, Observer } from 'rxjs';
+import { TasksService } from './todo.service';
 
-let todolist: Task[] = [{ "id": 1, "nome": "Respondere-mails", "finalizado": true, "iniciado": false }];
+const todolist: Task[] = [{ id: 1, nome: 'Respondere-mails', finalizado: true, iniciado: false }];
 
 function createResponse(body) {
   return Observable.create((observer: Observer<any>) => {

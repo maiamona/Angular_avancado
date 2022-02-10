@@ -1,6 +1,6 @@
-import { FileSizePipe } from "./file-size.pipe";
-import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { Component } from "@angular/core";
+import { FileSizePipe } from './file-size.pipe';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component } from '@angular/core';
 
 describe('FileSizePipe', () =>{
 describe('Teste Isolado', () =>{

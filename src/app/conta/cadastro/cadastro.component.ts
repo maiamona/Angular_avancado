@@ -48,8 +48,8 @@ export class CadastroComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
 
-let senha = new FormControl('', [Validators.required, ]);
-let senhaConfirm = new FormControl('', [Validators.required, ])
+const senha = new FormControl('', [Validators.required, ]);
+const senhaConfirm = new FormControl('', [Validators.required, ])
 
     this.cadastroForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -61,7 +61,7 @@ let senhaConfirm = new FormControl('', [Validators.required, ])
   }
 
   ngAfterViewInit(): void {
-let controlBlurs: Observable<any>[] = this.formInputElements
+const controlBlurs: Observable<any>[] = this.formInputElements
 .map((formControl: ElementRef) => fromEvent(formControl.nativeElement, 'blur'));
   }
 

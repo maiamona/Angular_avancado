@@ -1,4 +1,4 @@
-import { Component, Input, ChangeDetectionStrategy, EventEmitter, Output } from "@angular/core";
+import { Component, Input, ChangeDetectionStrategy, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-contador',
@@ -6,13 +6,13 @@ import { Component, Input, ChangeDetectionStrategy, EventEmitter, Output } from 
   templateUrl: './contador.component.html'
 })
 export class ContadorComponent {
-  @Input() passo: number = 1;
-  @Input() min: number = 0;
-  @Input() max: number = 100;
+  @Input() passo = 1;
+  @Input() min = 0;
+  @Input() max = 100;
 
   @Input() alterado = new EventEmitter<number>();
 
-  valor: number = 0;
+  valor = 0;
   foco: boolean;
 
   incrementar() {
@@ -36,7 +36,7 @@ export class ContadorComponent {
   }
 
   onkeyUp(event: KeyboardEvent) {
-    let handlers = {
+    const handlers = {
       ArrowDown: () => this.decrementar(),
       ArrowUp: () => this.incrementar()
     };
