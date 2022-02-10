@@ -15,7 +15,11 @@
           </li>
         </ul>
         <ul class="navbar-nav flex-grow-1">
-          <li class="nav-item">
+          <li class="nav-item" *ngFor="let item of nav">
+            <a class="nav-link text-dark" routerLinkActive="active" [routerLinkActiveOptions]="{exact: item.exact}"[routerLink]="item.link">{{item.name}}</a>
+          </li>
+
+          <!-- <li class="nav-item">
             <a class="nav-link text-dark" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/home']">Home</a>
           </li>
           <li class="nav-item">
@@ -26,7 +30,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link text-dark" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/produtos']">Produtos</a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>

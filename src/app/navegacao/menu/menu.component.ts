@@ -10,4 +10,44 @@ export class MenuComponent{
   constructor(){
     this.isCollapsed = true;
   }
+
+  nav: Nav[] = [
+    {
+      link: '/',
+      name: 'Home',
+      exact: true,
+      admin: true
+    },
+    {
+      link: '/cadastro',
+      name: 'Cadastro',
+      exact: true,
+      admin: true
+    },
+    {
+      link: '/formulario',
+      name: 'Formulario',
+      exact: true,
+      admin: true
+    },
+    {
+      link: '/produtos',
+      name: 'Produtos',
+      exact: true,
+      admin: true
+    },
+    {
+      link: '/filmes',
+      name: 'Filmes',
+      exact: true,
+      admin: true
+    }
+  ];
+}
+
+interface Nav{
+  link: string;
+  name: string;
+  exact: boolean;
+  admin: boolean;
 }

@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { Cadastro2Guard } from './conta/services/cadastro2.guard';
 import { CadastroComponent } from './navegacao/cadastro/cadastro.component';
+import { FilmesComponent } from './navegacao/filmes/filmes.component';
 import { FormularioComponent } from './navegacao/formulario/formulario.component';
 import { HomeComponent } from './navegacao/home/home.component';
 import { NotFoundComponent } from './navegacao/not-found/not-found.component';
@@ -28,6 +29,7 @@ loadChildren: () => import('./conta/conta.module')
 loadChildren: () => import('./navegacao/produto-dashboard/produto.module')
 .then(m => m.ProdutoModule)
 },
+{path: 'filmes', component: FilmesComponent},
 // {path: 'nao-encontrado', component: NotFoundComponent},
 {path: '**', component: NotFoundComponent}
 ];
