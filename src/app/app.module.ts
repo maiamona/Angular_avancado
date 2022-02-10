@@ -10,6 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { NavegacaoModule } from './navegacao/navegacao.module';
+import { Cadastro2Guard } from './conta/services/cadastro2.guard';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { NavegacaoModule } from './navegacao/navegacao.module';
      TextMaskModule,
 
   ],
-  providers: [],
+  providers: [
+    Cadastro2Guard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,41 @@
+<div class="p-b">
+  <div class="card h-100">
+    <div class="a-c">
+      <img src="/assets/{{produto.imagem}}" alt="" class="img-fluid">
+    </div>
+    <h4 class="card-title text-primary">{{produto.nome | titlecase}}</h4>
+    <div [ngSwitch]="produto.ativo">
+      <p *ngSwitchCase="true">Em estoque</p>
+      <p *ngSwitchCase="false" class="text-danger">Fora de estoque</p>
+    </div>
+    <div *ngIf="!produto.ativo" class="card-body">
+      <div>
+        <h4 class="text-danger">Avise-me quando chegar</h4>
+        <ng-content select=".acabou"></ng-content>
+
+        <h5></h5>
+      </div>
+    </div>
+    <div *ngIf="produto.ativo" class="card-body">
+      <div>
+        <h4>{{produto.valor | currency:'BRL':'symbol':'1.2-2':'pt'}}</h4>
+        <ng-content select=".corre"></ng-content>
+      </div>
+    </div>
+    <div class="card-footer">
+      <!-- <a href="javascript:void(0)" class="btn btn-success" (click)="emitirEvento()">Botao</a> -->
+
+      <a href="javascript:void(0)" class="btn btn-success" (click)="emitirEvento()">
+        <span> <span [ngClass]="produto.ativo ? 'fa fa-toggle-on' : 'fa fa-toggle-off'"> </span> Status</span>
+      </a>
+      <!-- <a href="javascript:void(0)" [ngClass]="produto.ativo ? 'btn btn-success' : 'btn btn-warning'" (click)="emitirEvento()">
+        <span><span [ngClass]="produto.ativo ? 'fa fa-toggle-on' : 'fa fa-toggle-off'"></span>status</span>
+      </a> -->
+      <!-- <a href="javascript:void(0)" [ngClass]="produto.ativo ? 'btn btn-success' : 'btn btn-warning'" (click)="emitirEvento()">Botao</a> -->
+
+      &nbsp;
+      <!-- <a [routerLink]="['editar/', produto.id]" class="btn btn-primary">Editar</a> -->
+      <a (click)="editar()" class="btn btn-primary">Editar</a>
+    </div>
+  </div>
+</div>

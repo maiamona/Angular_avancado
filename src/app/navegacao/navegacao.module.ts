@@ -12,6 +12,14 @@ import { TextMaskModule } from "angular2-text-mask";
 import { FormularioComponent } from './formulario/formulario.component';
 import { DynamicFormQuestionComponent } from './dynamic-form-question/dynamic-form-question.component';
 import { DynamicFormComponent } from './dynamic-form-question/dynamic-form.component';
+import { ProdutoDashboardComponent } from './produto-dashboard/produto-dashboard.component';
+import { ProdutoCardDetalheComponent } from './produto-count/produto-card-detalhe.component';
+import { ProdutoCountComponent } from './produto-count/produto-count.component';
+import { AppProdutoComponent } from './produto-dashboard/app-produto.component';
+import { EditarProdutosComponent } from './editar-produtos/editar-produtos.component';
+import { ProdutoRoutingModule } from './produto-dashboard/produto-routing.module';
+import { ProdutoService } from '../conta/services/produto.service';
+import { ProdutoResolve } from '../conta/services/produto.resolve';
 
 
 @NgModule({
@@ -24,22 +32,30 @@ import { DynamicFormComponent } from './dynamic-form-question/dynamic-form.compo
     CadastroComponent,
     FormularioComponent,
     DynamicFormQuestionComponent,
-    DynamicFormComponent
+    DynamicFormComponent,
+
   ],
   imports: [
     CommonModule,
     RouterModule,//quando vou utilizar links de roteamento na nossa pagina
     TextMaskModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ProdutoRoutingModule
   ],
+  providers: [
+ProdutoService,
+ProdutoResolve
+],
   exports: [
     MenuComponent,
     HomeComponent,
     FooterComponent,
     NotFoundComponent,
     PrincipalComponent,
-    CadastroComponent
+    CadastroComponent,
+
+
   ]
 })
 export class NavegacaoModule { }
