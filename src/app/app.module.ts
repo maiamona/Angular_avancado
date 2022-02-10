@@ -15,13 +15,25 @@ import { FilmesComponent } from './navegacao/filmes/filmes.component';
 import { FileSizePipe } from './navegacao/filmes/file-size.pipe';
 import { BarModule } from './navegacao/bar/bar.module';
 import { AuthGuard } from './conta/services/app.guard';
+import { TasksService } from './navegacao/todo/todo.service';
+import { Store } from './navegacao/todo/todo.store';
+import { TodoComponent } from './navegacao/todo/todo.component';
+import { TasksFinalizadasComponent } from './navegacao/todo/component/tasks-finalizadas/tasks-finalizadas.component';
+import { TasksIniciadasComponent } from './navegacao/todo/component/tasks-iniciadas/tasks-iniciadas.component';
+import { TodoListComponent } from './navegacao/todo/component/todo-list/todo-list.component';
+import { TasksComponent } from './navegacao/todo/component/tasks/tasks.component';
 registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
     AppComponent,
     FilmesComponent,
-    FileSizePipe
+    FileSizePipe,
+    TodoComponent,
+    TasksFinalizadasComponent,
+    TasksIniciadasComponent,
+    TodoListComponent,
+    TasksComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +51,9 @@ registerLocaleData(localePt);
   ],
   providers: [
     Cadastro2Guard,
-    AuthGuard
+    AuthGuard,
+    TasksService,
+    Store
   ],
   bootstrap: [AppComponent]
 })

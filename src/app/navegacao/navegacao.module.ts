@@ -19,6 +19,7 @@ import { ProdutoResolve } from '../conta/services/produto.resolve';
 
 
 import { ContadorComponent } from './contador/contador.component';
+import { TodoComponent } from './todo/todo.component';
 
 
 
@@ -34,6 +35,7 @@ import { ContadorComponent } from './contador/contador.component';
     DynamicFormQuestionComponent,
     DynamicFormComponent,
     ContadorComponent,
+
 
 
 

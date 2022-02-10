@@ -12,6 +12,7 @@ import { FormularioComponent } from './navegacao/formulario/formulario.component
 import { HomeComponent } from './navegacao/home/home.component';
 import { NotFoundComponent } from './navegacao/not-found/not-found.component';
 import { PrincipalComponent } from './navegacao/principal/principal.component';
+import { TodoComponent } from './navegacao/todo/todo.component';
 
 
 
@@ -34,6 +35,7 @@ loadChildren: () => import('./navegacao/produto-dashboard/produto.module')
 },
 {path: 'filmes', component: FilmesComponent},
 { path: 'bar', component: BarComponent },
+{ path: 'todo', component: TodoComponent },
 { path: 'contador', component: ContadorComponent },
 { path: 'admin',
 loadChildren: () => import('./navegacao/admin-dashboard/admin-route.module')

@@ -1,0 +1,64 @@
+{
+  "todolist": [
+    {
+      "id": 1,
+      "nome": "Fazer formação RxJS",
+      "finalizado": false,
+      "iniciado": false
+    },
+    {
+      "id": 2,
+      "nome": "Fazer formação NGRX",
+      "finalizado": false,
+      "iniciado": true
+    },
+    {
+      "id": 3,
+      "nome": "Fazer formação Redux",
+      "finalizado": true,
+      "iniciado": false
+    },
+    {
+      "id": 4,
+      "nome": "Fazer formação Akita",
+      "finalizado": false,
+      "iniciado": false
+    },
+    {
+      "id": 5,
+      "nome": "Fazer exercicios de PL/SQL",
+      "finalizado": false,
+      "iniciado": false
+    },
+    {
+      "id": 6,
+      "nome": "Fazer formação Material Angular",
+      "finalizado": false,
+      "iniciado": false
+    },
+    {
+      "id": 7,
+      "nome": "baixar o curso da udemy-Photoshop",
+      "finalizado": true,
+      "iniciado": false
+    },
+    {
+      "id": 8,
+      "nome": "estudar porm.xml no visual code",
+      "finalizado": false,
+      "iniciado": false
+    },
+    {
+      "id": 9,
+      "nome": "Fazer formação CSS",
+      "finalizado": false,
+      "iniciado": false
+    },
+    {
+      "id": 10,
+      "nome": "Fazer o curso AngularJs",
+      "finalizado": true,
+      "iniciado": false
+    }
+  ]
+}
