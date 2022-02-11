@@ -34,7 +34,7 @@ subscription: Subscription;
     this.tasksService.toggle(event);
     setTimeout(() => {
       window.location.reload();
-    }, 100);
+    }, 0);
   }
 
 }

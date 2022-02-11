@@ -10,7 +10,7 @@
       "id": 2,
       "nome": "Fazer formação NGRX",
       "finalizado": false,
-      "iniciado": true
+      "iniciado": false
     },
     {
       "id": 3,
@@ -22,18 +22,18 @@
       "id": 4,
       "nome": "Fazer formação Akita",
       "finalizado": false,
-      "iniciado": false
+      "iniciado": true
     },
     {
       "id": 5,
       "nome": "Fazer exercicios de PL/SQL",
       "finalizado": false,
-      "iniciado": false
+      "iniciado": true
     },
     {
       "id": 6,
       "nome": "Fazer formação Material Angular",
-      "finalizado": false,
+      "finalizado": true,
       "iniciado": false
     },
     {
@@ -45,8 +45,8 @@
     {
       "id": 8,
       "nome": "estudar porm.xml no visual code",
-      "finalizado": false,
-      "iniciado": true
+      "finalizado": true,
+      "iniciado": false
     },
     {
       "id": 9,
@@ -57,7 +57,7 @@
     {
       "id": 10,
       "nome": "Fazer o curso AngularJs",
-      "finalizado": true,
+      "finalizado": false,
       "iniciado": false
     }
   ]

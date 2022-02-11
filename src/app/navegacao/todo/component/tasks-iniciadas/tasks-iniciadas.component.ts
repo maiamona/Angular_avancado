@@ -26,7 +26,7 @@ iniciadas$: Observable<any[]>;
 
     setTimeout(() => {
       window.location.reload();
-    }, 100);
+    }, 0);
   }
 
 }
