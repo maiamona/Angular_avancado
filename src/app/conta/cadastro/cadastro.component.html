@@ -1,36 +1,36 @@
 <div class="container main-container mb-5">
   <h1>Cadastro</h1>
-  <form novalidate (ngSubmit)="adicionarConta()" >
+  <form novalidate (ngSubmit)="adicionarConta()" [formGroup]="cadastroForm">
     <h4>Crie sua conta</h4>
     <hr>
-    <div class="alert alert-danger" *ngFor="errors.length > 0">
+    <div class="alert alert-danger" *ngIf="errors.length > 0">
       <h3 id="msgRetorno">Opa! Alguma coisa não deu certo:</h3>
       <ul>
         <li *ngFor="let error of errors">{{error}}</li>
       </ul>
     </div>
     <div class="form-group">
-      <label for="" class="col-md-2 control-label">E-mail</label>
+      <label class="col-md-2 control-label">E-mail</label>
       <div class="col-md-10">
-        <input type="text" class="form-control" id="email" placeholder="E-mail (requerido)" [ngClass]="{'is-invalid': displayMessage.email}">
+        <input type="email" class="form-control" id="email" placeholder="E-mail (requerido)" formControlName="email" [ngClass]="{'is-invalid': displayMessage.email}">
         <span class="text-danger" *ngIf="displayMessage.email">
           <p [innerHTML]="displayMessage.email"></p>
         </span>
       </div>
     </div>
     <div class="form-group">
-      <label for="" class="col-md-2 control-label">Senha</label>
+      <label class="col-md-2 control-label">Senha</label>
       <div class="col-md-10">
-        <input type="text" class="form-control" id="password" placeholder="Senha (requerido)" [ngClass]="{'is-invalid': displayMessage.password}">
+        <input type="password" class="form-control" id="password" placeholder="Senha (requerido)" formControlName="password" [ngClass]="{'is-invalid': displayMessage.password}">
         <span class="text-danger" *ngIf="displayMessage.password">
           <p [innerHTML]="displayMessage.password"></p>
         </span>
       </div>
     </div>
     <div class="form-group">
-      <label for="" class="col-md-2 control-label">confirme a Senha</label>
+      <label class="col-md-2 control-label">confirme a Senha</label>
       <div class="col-md-10">
-        <input type="password" class="form-control" id="confirmPassword" placeholder="Conforme a (requerido)">
+        <input type="password" class="form-control" id="confirmPassword" placeholder="Conforme a (requerido)" formControlName="confirmPassword" [ngClass]="{'is-invalid': displayMessage.confirmPassword}">
         <span class="text-danger" *ngIf="displayMessage.confirmPassword">
           <p [innerHTML]="displayMessage.confirmPassword"></p>
         </span>

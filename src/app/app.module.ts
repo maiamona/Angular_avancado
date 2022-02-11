@@ -22,6 +22,7 @@ import { TasksFinalizadasComponent } from './navegacao/todo/component/tasks-fina
 import { TasksIniciadasComponent } from './navegacao/todo/component/tasks-iniciadas/tasks-iniciadas.component';
 import { TodoListComponent } from './navegacao/todo/component/todo-list/todo-list.component';
 import { TasksComponent } from './navegacao/todo/component/tasks/tasks.component';
+import { ContaRoutingModule } from './conta/conta-routing.module';
 registerLocaleData(localePt);
 
 @NgModule({
@@ -38,6 +39,7 @@ registerLocaleData(localePt);
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ContaRoutingModule,
     NavegacaoModule,
     NgBrazil,
     CustomFormsModule,

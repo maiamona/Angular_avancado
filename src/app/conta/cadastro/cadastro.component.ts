@@ -6,6 +6,7 @@ import { Usuario } from '../model/usuario';
 import { ContaService } from '../services/conta.service';
 
 import { Observable, fromEvent, merge } from 'rxjs';
+import { CustomValidators } from 'ng2-validation';
 
 
 @Component({
@@ -36,7 +37,7 @@ export class CadastroComponent implements OnInit, AfterViewInit {
           required: 'Informe a senha',
           email: 'A senha deve possuir entre 6 a 15 caracteres'
         },
-        confirmPassord:{
+        confirmPassword:{
           required: 'Informe a senha novamente',
           email: 'A senha deve possuir entre 6 a 15 caracteres',
           equalTo: 'As senhas não conferem'
@@ -48,8 +49,8 @@ export class CadastroComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
 
-const senha = new FormControl('', [Validators.required, ]);
-const senhaConfirm = new FormControl('', [Validators.required, ])
+let senha = new FormControl('', [Validators.required, CustomValidators.rangeLength([6, 15])]);
+let senhaConfirm = new FormControl('', [Validators.required, CustomValidators.rangeLength([6, 15]), CustomValidators.equalTo(senha)])
 
     this.cadastroForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -61,8 +62,13 @@ const senhaConfirm = new FormControl('', [Validators.required, ])
   }
 
   ngAfterViewInit(): void {
-const controlBlurs: Observable<any>[] = this.formInputElements
+let controlBlurs: Observable<any>[] = this.formInputElements
 .map((formControl: ElementRef) => fromEvent(formControl.nativeElement, 'blur'));
+
+merge(...controlBlurs).subscribe(() =>{
+this.displayMessage = this.genericValidator.processarMensagens(this.cadastroForm);
+
+});
   }
 
   adicionarConta() {
