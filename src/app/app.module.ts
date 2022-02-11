@@ -39,7 +39,7 @@ registerLocaleData(localePt);
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ContaRoutingModule,
+    // ContaRoutingModule,
     NavegacaoModule,
     NgBrazil,
     CustomFormsModule,

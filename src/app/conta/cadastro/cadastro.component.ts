@@ -30,17 +30,17 @@ export class CadastroComponent implements OnInit, AfterViewInit {
     private contaService: ContaService) {
       this.validationMessages = {
         email:{
-          required: 'Informe o e-mail',
-          email: 'Email invalido'
+          required: ' Informe o e-mail',
+          email: ' Email invalido'
         },
         password:{
-          required: 'Informe a senha',
-          email: 'A senha deve possuir entre 6 a 15 caracteres'
+          required: ' Informe a senha',
+          rangeLength: ' A senha deve possuir entre 6 a 15 caracteres'
         },
         confirmPassword:{
-          required: 'Informe a senha novamente',
-          email: 'A senha deve possuir entre 6 a 15 caracteres',
-          equalTo: 'As senhas não conferem'
+          required: ' Informe a senha novamente',
+          rangeLength: ' A senha deve possuir entre 6 a 15 caracteres',
+          equalTo: ' As senhas não conferem'
         }
       };
 
@@ -75,8 +75,18 @@ this.displayMessage = this.genericValidator.processarMensagens(this.cadastroForm
     if (this.cadastroForm.dirty && this.cadastroForm.valid) {
       this.usuario = Object.assign({}, this.usuario, this.cadastroForm.value);
 
-      this.contaService.registrarUsuario(this.usuario);
+      this.contaService.registrarUsuario(this.usuario)
+      .subscribe(
+        sucesso =>{this.processarSucesso(sucesso)},
+        falha =>{this.processarFalha(falha)}
+      );
     }
   }
+processarSucesso(response: any){
 
+}
+
+processarFalha(fail: any){
+
+}
 }
