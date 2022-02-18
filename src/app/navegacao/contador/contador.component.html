@@ -6,10 +6,10 @@
       <div (keydown)="onkeyUp($event)" (blur)="onBlur($event)" (focus)="onFocus($event)" tabindex="0">
         <p>{{valor}}</p>
         <div tabindex="-1">
-          <button type="button" tabindex="-1" (click)="incrementar()" [disabled]="valor === max">
+          <button type="button" class="btn btn-primary" tabindex="-1" (click)="incrementar()" [disabled]="valor === max">
             +
           </button>
-          <button type="button" tabindex="-1" (click)="decrementar()" [disabled]="valor === min">
+          <button type="button" tabindex="-1" class="btn btn-primary" (click)="decrementar()" [disabled]="valor === min">
             -
           </button>
         </div>
