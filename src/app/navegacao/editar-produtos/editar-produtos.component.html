@@ -1,0 +1,37 @@
+
+<div class="container main-container text-center mb-5 mt-5">
+
+  <div class="py-3">
+    <div class="card h-100">
+      <div class="a-c">
+        <img src="/assets/{{produto.imagem}}" alt="" class="img-fluid">
+      </div>
+      <h4 class="card-title text-primary">{{produto.nome | titlecase}}</h4>
+      <div [ngSwitch]="produto.ativo">
+        <p *ngSwitchCase="true">Em estoque</p>
+        <p *ngSwitchCase="false" class="text-danger">Fora de estoque</p>
+      </div>
+      <div *ngIf="!produto.ativo" class="card-body">
+        <div>
+          <h4 class="text-danger">Avise-me quando chegar</h4>
+          <ng-content select=".acabou"></ng-content>
+
+          <h5></h5>
+        </div>
+      </div>
+      <div *ngIf="produto.ativo" class="card-body">
+        <div>
+          <h4>{{produto.valor | currency:'BRL':'symbol':'1.2-2':'pt'}}</h4>
+          <ng-content select=".corre"></ng-content>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a (click)="salvar()" class="btn btn-success btn-lg text-white">Salvar</a>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+

@@ -1,0 +1,51 @@
+<br><br>
+<div class="container main-container">
+
+  <div class="row">
+    <div class="col-md-6">
+      <h1 #teste class="cursor">Lista Produtos</h1>
+      <produto-count [produtos]="produtos"></produto-count>
+    </div>
+    <div class="col-md-6">
+      <a (click)="todos()" class="btn btn-success btn-lg mr-5 text-white">todos</a>
+<a (click)="ativos()" class="btn btn-info btn-lg ml-5 mr-5 text-white">ativos</a>
+<a (click)="desativos()" class="btn btn-warning btn-lg ml-5">desativos</a>
+
+    </div>
+  </div>
+  <div class="row text-center">
+    <!-- <div *ngFor="let produto of produtos" class="col-md-4 p-b">
+      <div class="card h-100">
+        <div class="a-c">
+          <img src="/assets/{{produto.imagem}}" alt="" class="img-fluid">
+        </div>
+        <h4 class="card-title">{{produto.nome | titlecase}}</h4>
+        <div [ngSwitch]="produto.ativo">
+          <p *ngSwitchCase="true">Em estoque</p>
+          <p *ngSwitchCase="false">Fora de estoque</p>
+        </div>
+        <div *ngIf="!produto.ativo" class="card-body">
+          <div>
+            <h4>Avise-me quando chegar</h4>
+          </div>
+        </div>
+        <div *ngIf="produto.ativo" class="card-body">
+          <div>
+            <h4>{{produto.valor | currency:'BRL':'symbol':'1.2-2':'pt'}}</h4>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="javascript:void(0)" class="btn btn-success">Botao</a>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- A entrada '@Input' => é atravez da 'property binding' e a saida '@Output' => é atravez da 'event binding' -->
+    <produto-card-detalhe class="col-md-4" *ngFor="let produto of produtos" [produto]="produto" (status)="mudarStatus($event)">
+      <h5 class="acabou">Ou va ate uma de nossas lojas</h5>
+      <h5 class="corre">Corre que vai acabar</h5>
+    </produto-card-detalhe>
+  </div>
+</div>
+<br><br><br>
+
